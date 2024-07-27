@@ -25,3 +25,8 @@ Ideally we can use Github CI to compile grammars and publish them either to Gith
 - [Automate npm publishing with GitHub Actions, proper changelog, and release notes](https://superface.ai/blog/npm-publish-gh-actions-changelog)
 - [Publishing Node.js packages](https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages)
 - [How To Automatically update git submodules using GitHub Actions](https://medium.com/@0xWerz/how-to-automatically-update-git-submodules-using-github-actions-d71c8126e82e)
+
+How to distribute WASM files
+
+- Directly expose in [exports](https://webpack.js.org/guides/package-exports/)
+- [Other options](https://github.com/stereobooster/gnuplot-wasm/tree/main#other-options)
