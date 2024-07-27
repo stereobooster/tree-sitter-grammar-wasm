@@ -31,3 +31,15 @@ How to distribute WASM files
 
 - Directly expose in [exports](https://webpack.js.org/guides/package-exports/)
 - [Other options](https://github.com/stereobooster/gnuplot-wasm/tree/main#other-options)
+
+## Idea
+
+For each package create `config.json` with:
+
+- `repository`
+- `commit`
+- `path` (if grammar not in root path)
+- `name` - can use folder name instead
+- `extensions` - file extensions
+- `fields` (maybe) - which fields to copy from original `package.json`
+- `version` - unless I figure out how to auto-generate one
