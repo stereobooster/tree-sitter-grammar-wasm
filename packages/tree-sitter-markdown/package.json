@@ -1,0 +1,19 @@
+{
+  "name": "@tree-sitter-grammars/tree-sitter-markdown",
+  "version": "0.2.3",
+  "description": "Markdown grammar for tree-sitter",
+  "author": "MDeiml (https://github.com/MDeiml)",
+  "license": "MIT",
+  "keywords": [
+    "grammar",
+    "tree-sitter",
+    "markdown"
+  ],
+  "files": [
+    "tree-sitter-markdown.wasm"
+  ],
+  "exports": {
+    ".": "./tree-sitter-markdown.wasm",
+    "./tree-sitter-markdown.wasm": "./tree-sitter-markdown.wasm"
+  }
+}

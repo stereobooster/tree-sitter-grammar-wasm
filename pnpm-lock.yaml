@@ -1,0 +1,45 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/experiment:
+    dependencies:
+      '@tree-sitter-grammars/tree-sitter-markdown':
+        specifier: workspace:*
+        version: link:../tree-sitter-markdown
+      '@webfill/import-meta-resolve':
+        specifier: ^1.0.0
+        version: 1.0.0
+      import-meta-resolve:
+        specifier: ^4.1.0
+        version: 4.1.0
+      web-tree-sitter:
+        specifier: ^0.22.6
+        version: 0.22.6
+
+  packages/tree-sitter-markdown: {}
+
+packages:
+
+  '@webfill/import-meta-resolve@1.0.0':
+    resolution: {integrity: sha512-Y68hshnzireAt7u3bkF5BkIRM3gzHYhfRWrQk0qd694cL4ih4kvyrtCUraygVqIlpVrkTK6G3cpSYBs7ou0DkA==}
+
+  import-meta-resolve@4.1.0:
+    resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
+  web-tree-sitter@0.22.6:
+    resolution: {integrity: sha512-hS87TH71Zd6mGAmYCvlgxeGDjqd9GTeqXNqTT+u0Gs51uIozNIaaq/kUAbV/Zf56jb2ZOyG8BxZs2GG9wbLi6Q==}
+
+snapshots:
+
+  '@webfill/import-meta-resolve@1.0.0': {}
+
+  import-meta-resolve@4.1.0: {}
+
+  web-tree-sitter@0.22.6: {}

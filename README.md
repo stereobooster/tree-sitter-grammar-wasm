@@ -9,6 +9,7 @@ For inspiration, collection of other grammars:
 
 Where to get tree-sitter grammars:
 
+- [official website](https://tree-sitter.github.io/tree-sitter/#parsers)
 - [tree-sitter-grammars](https://github.com/tree-sitter-grammars)
 - [github search - topic:tree-sitter grammar](https://github.com/search?q=topic%3Atree-sitter+fork%3Atrue++language%3AC+grammar&type=repositories)
 - [ZED extensions for grammars](https://github.com/zed-industries/extensions/blob/main/AUTHORING_EXTENSIONS.md), like
