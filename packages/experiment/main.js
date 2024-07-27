@@ -3,7 +3,7 @@ import Parser from "web-tree-sitter";
 import * as importMetaResolve from "import-meta-resolve";
 const wasmPath = importMetaResolve
   .resolve(
-    "@tree-sitter-grammars/tree-sitter-markdown",
+    "@tsg-wasm/markdown",
     import.meta.url
   )
   .replace("file://", "");
@@ -11,7 +11,7 @@ const wasmPath = importMetaResolve
 // import resolve from "@webfill/import-meta-resolve";
 // const wasmPath = resolve(
 //   import.meta,
-//   "@tree-sitter-grammars/tree-sitter-markdown"
+//   "@tsg-wasm/markdown"
 // ).replace("file://", "");
 
 await Parser.init();

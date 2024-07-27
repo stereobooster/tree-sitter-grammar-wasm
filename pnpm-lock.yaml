@@ -10,9 +10,9 @@ importers:
 
   packages/experiment:
     dependencies:
-      '@tree-sitter-grammars/tree-sitter-markdown':
+      '@tsg-wasm/markdown':
         specifier: workspace:*
-        version: link:../tree-sitter-markdown
+        version: link:../markdown
       '@webfill/import-meta-resolve':
         specifier: ^1.0.0
         version: 1.0.0
@@ -23,7 +23,7 @@ importers:
         specifier: ^0.22.6
         version: 0.22.6
 
-  packages/tree-sitter-markdown: {}
+  packages/markdown: {}
 
 packages:
 
