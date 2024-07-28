@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/tree-sitter/tree-sitter-ruby.git",
+  "commit": "0ffe457fb6aabf064f173fd30ea356845cef2513",
+  "extensions": ["rb"]
+}
