@@ -33,19 +33,35 @@ function packageJson({ name, version, author, license, wasmFile }) {
   };
 }
 
+function readJson(path) {
+  return JSON.parse(readFileSync(path, "utf8"));
+}
+
+function writeJson(path, data) {
+  writeFileSync(path, JSON.stringify(data, null, 2));
+}
+
+const lockPath = "build-lock.json";
+const buildLock = readJson(lockPath);
+
 const base = "packages";
 readdirSync(base).forEach((name) => {
   if (name == "experiment") return;
 
   const packagePath = `${base}/${name}`;
-  const config = JSON.parse(readFileSync(`${packagePath}/config.json`, "utf8"));
+  const config = readJson(`${packagePath}/config.json`);
+
+  if (buildLock[name] && buildLock[name].commit === config.commit) {
+    return;
+  }
+
+  buildLock[name] = buildLock[name] || {};
+  buildLock[name].commit = config.commit;
 
   const subPath = config.path ? `${config.path}/` : "";
   const gitFolderName = folderName(config.repository);
   const wasmFile = `${gitFolderName}.wasm`;
   const tmpPath = `${packagePath}/tmp/`;
-
-  // TODO: read build-sha file and if it is the same do nothing
 
   const git = `cd ${packagePath}
 mkdir tmp
@@ -57,17 +73,13 @@ git checkout ${config.commit}`;
 
   spawnSync(git, { stdio: "inherit", shell: true });
 
-  const orginalPkg = JSON.parse(readFileSync(`${tmpPath}package.json`, "utf8"));
+  const orginalPkg = readJson(`${tmpPath}package.json`);
 
   const { version, author, license } = orginalPkg;
 
-  writeFileSync(
+  writeJson(
     `${packagePath}/package.json`,
-    JSON.stringify(
-      packageJson({ name, version, author, license, wasmFile }),
-      null,
-      2
-    )
+    packageJson({ name, version, author, license, wasmFile })
   );
 
   spawnSync(`npx -y tree-sitter-cli build --wasm`, {
@@ -82,9 +94,7 @@ git checkout ${config.commit}`;
 
   copyFileSync(`${tmpPath}${subPath}${wasmFile}`, `${packagePath}/${wasmFile}`);
 
-  // TODO: write build-sha file
-
-  // TODO: update package.json
-
   rmSync(tmpPath, { recursive: true });
 });
+
+writeJson(lockPath, buildLock);
