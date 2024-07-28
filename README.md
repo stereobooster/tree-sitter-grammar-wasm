@@ -38,6 +38,5 @@ Gramamrs can be used with [web-tree-sitter](https://www.npmjs.com/package/web-tr
 
 ## TODO
 
-- [ ] enable provenance
-- [ ] Fail script if build fails
-- [ ] Make sure to not publish without wasm file
+- [ ] how to publish `typescript` and `tsx` packages separately (or together)?
+- [ ] how to publish different versions of SQL dialects?
