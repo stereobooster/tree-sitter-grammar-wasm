@@ -28,15 +28,11 @@ jobs:
           node-version: 20
           # cache: "pnpm"
 
-      # - uses: ScribeMD/docker-cache@0.5.0
-      #   with:
-      #     key: docker-${{ runner.os }}
-          
       - uses: mymindstorm/setup-emsdk@v14
 
       - name: Build
         run: node build.js
 
-      # - uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: Update wasm artifacts
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update wasm artifacts
