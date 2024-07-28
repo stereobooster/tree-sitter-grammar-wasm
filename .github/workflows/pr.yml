@@ -1,0 +1,25 @@
+name: pr
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: build
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - uses: mymindstorm/setup-emsdk@v14
+
+      - name: Build
+        run: node build.js
