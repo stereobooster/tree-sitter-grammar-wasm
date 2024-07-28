@@ -1,6 +1,6 @@
 {
   "name": "@tsgw/lua",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "lua grammar for tree-sitter",
   "author": "Munif Tanjim (https://muniftanjim.dev)",
   "license": "MIT",

@@ -1,1 +1,10 @@
-{}
+{
+  "lua": {
+    "commit": "a24dab177e58c9c6832f96b9a73102a0cfbced4a",
+    "version": "0.1.0"
+  },
+  "markdown": {
+    "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b",
+    "version": "0.2.3"
+  }
+}
