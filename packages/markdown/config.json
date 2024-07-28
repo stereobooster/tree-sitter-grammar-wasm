@@ -2,6 +2,5 @@
   "repository": "https://github.com/tree-sitter-grammars/tree-sitter-markdown.git",
   "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b",
   "path": "tree-sitter-markdown",
-  "extensions": ["md"],
-  "version": "0.0.2"
+  "extensions": ["md"]
 }
