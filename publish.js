@@ -27,8 +27,7 @@ readdirSync(base).forEach((name) => {
   buildLock[name] = buildLock[name] || {};
   buildLock[name].version = pkg.version;
 
-  // --provenance needs public repo
-  spawnSync("npm publish --access public", {
+  spawnSync("npm publish --provenance --access public", {
     stdio: "inherit",
     shell: true,
     cwd: packagePath,
