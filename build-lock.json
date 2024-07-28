@@ -10,5 +10,9 @@
   "ruby": {
     "commit": "0ffe457fb6aabf064f173fd30ea356845cef2513",
     "version": "0.21.0"
+  },
+  "javascript": {
+    "commit": "a92640f158c208ca3be28b560b838b2bd60e8eac",
+    "version": "0.21.4"
   }
 }
