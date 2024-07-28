@@ -28,6 +28,12 @@ jobs:
           node-version: 20
           # cache: "pnpm"
 
+      # - uses: ScribeMD/docker-cache@0.5.0
+      #   with:
+      #     key: docker-${{ runner.os }}
+          
+      - uses: mymindstorm/setup-emsdk@v14
+
       - name: Build
         run: node build.js
 
