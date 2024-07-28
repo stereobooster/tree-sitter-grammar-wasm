@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     name: build and publish
-    # timeout-minutes: 15
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,9 +22,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          # node-version the same as in `mymindstorm/setup-emsdk`
+          node-version: "18.20.3"
           registry-url: "https://registry.npmjs.org"
-          # cache: "pnpm"
 
       - uses: mymindstorm/setup-emsdk@v14
 
