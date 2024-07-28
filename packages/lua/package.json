@@ -1,0 +1,24 @@
+{
+  "name": "@tsgw/lua",
+  "version": "0.0.1",
+  "description": "lua grammar for tree-sitter",
+  "author": "Munif Tanjim (https://muniftanjim.dev)",
+  "license": "MIT",
+  "keywords": [
+    "grammar",
+    "tree-sitter",
+    "lua"
+  ],
+  "files": [
+    "tree-sitter-lua.wasm"
+  ],
+  "exports": {
+    ".": "./tree-sitter-lua.wasm",
+    "./tree-sitter-lua.wasm": "./tree-sitter-lua.wasm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stereobooster/tree-sitter-grammar-wasm.git",
+    "directory": "packages/lua"
+  }
+}
