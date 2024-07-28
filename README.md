@@ -21,25 +21,17 @@ Where to get tree-sitter grammars:
 
 Gramamrs can be used with [web-tree-sitter](https://www.npmjs.com/package/web-tree-sitter) or Rust (like [they do in Zed](https://zed.dev/blog/language-extensions-part-1#challenges-with-packaging-parsers)).
 
-Ideally we can use Github CI to compile grammars and publish them either to Github releases or to npm:
+## To add grammar
 
-- [Automate npm publishing with GitHub Actions, proper changelog, and release notes](https://superface.ai/blog/npm-publish-gh-actions-changelog)
-- [Publishing Node.js packages](https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages)
-- [How To Automatically update git submodules using GitHub Actions](https://medium.com/@0xWerz/how-to-automatically-update-git-submodules-using-github-actions-d71c8126e82e)
+1. create folder `something`
+2. create file `something/config.json`
 
-How to distribute WASM files
+   ```json
+   {
+     "repository": "https://github.com/tree-sitter-grammars/tree-sitter-markdown.git",
+     "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b"
+   }
+   ```
 
-- Directly expose in [exports](https://webpack.js.org/guides/package-exports/)
-- [Other options](https://github.com/stereobooster/gnuplot-wasm/tree/main#other-options)
-
-## Idea
-
-For each package create `config.json` with:
-
-- `repository`
-- `commit`
-- `path` (if grammar not in root path)
-- `name` - can use folder name instead
-- `extensions` - file extensions
-- `fields` (maybe) - which fields to copy from original `package.json`
-- `version` - unless I figure out how to auto-generate one
+3. create PR
+4. as soon as PR merged npm package `@tsgw/something` will be published automatically
