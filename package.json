@@ -1,4 +1,5 @@
 {
   "name": "tree-sitter-grammar-wasm",
-  "private": true
+  "private": true,
+  "type": "module"
 }
