@@ -63,6 +63,15 @@ readdirSync(base).forEach((name) => {
   const wasmFile = `${gitFolderName}.wasm`;
   const tmpPath = `${packagePath}/tmp/`;
 
+  writeFileSync(
+    `${packagePath}/readme.md`,
+    `# ${gitFolderName}
+
+Source: ${config.repository}
+Commit sha: ${config.commit}
+`
+  );
+
   const git = `cd ${packagePath}
 mkdir tmp
 cd tmp
@@ -79,7 +88,13 @@ git checkout ${config.commit}`;
 
   writeJson(
     `${packagePath}/package.json`,
-    packageJson({ name, version, author, license, wasmFile })
+    packageJson({
+      version: config.version || version,
+      name,
+      author,
+      license,
+      wasmFile,
+    })
   );
 
   spawnSync(`npx -y tree-sitter-cli build --wasm`, {
