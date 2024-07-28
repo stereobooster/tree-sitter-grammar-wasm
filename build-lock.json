@@ -6,5 +6,9 @@
   "markdown": {
     "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b",
     "version": "0.2.3"
+  },
+  "ruby": {
+    "commit": "0ffe457fb6aabf064f173fd30ea356845cef2513",
+    "version": "0.21.0"
   }
 }

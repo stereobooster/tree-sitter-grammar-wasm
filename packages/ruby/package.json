@@ -1,0 +1,24 @@
+{
+  "name": "@tsgw/ruby",
+  "version": "0.21.0",
+  "description": "ruby grammar for tree-sitter",
+  "author": "Rob Rix",
+  "license": "MIT",
+  "keywords": [
+    "grammar",
+    "tree-sitter",
+    "ruby"
+  ],
+  "files": [
+    "tree-sitter-ruby.wasm"
+  ],
+  "exports": {
+    ".": "./tree-sitter-ruby.wasm",
+    "./tree-sitter-ruby.wasm": "./tree-sitter-ruby.wasm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stereobooster/tree-sitter-grammar-wasm.git",
+    "directory": "packages/ruby"
+  }
+}
