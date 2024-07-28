@@ -1,10 +1,10 @@
 name: CI
 
 on:
-  push:
-    branches: ["main"]
   pull_request:
-    types: [opened, synchronize]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -30,3 +30,7 @@ jobs:
 
       - name: Build
         run: node build.js
+
+      # - uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     commit_message: Update wasm artifacts
