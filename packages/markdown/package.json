@@ -1,6 +1,6 @@
 {
-  "name": "@tsg-wasm/markdown",
-  "version": "0.2.3",
+  "name": "@tsgw/markdown",
+  "version": "0.0.1",
   "description": "markdown grammar for tree-sitter",
   "author": "MDeiml (https://github.com/MDeiml)",
   "license": "MIT",

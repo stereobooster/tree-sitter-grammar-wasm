@@ -14,7 +14,7 @@ function folderName(url) {
 
 function packageJson({ name, version, author, license, wasmFile }) {
   return {
-    name: `@tsg-wasm/${name}`,
+    name: `@tsgw/${name}`,
     version,
     description: `${name} grammar for tree-sitter`,
     author,

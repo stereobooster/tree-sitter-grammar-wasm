@@ -21,11 +21,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      # - uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 8
-      #     run_install: false
-
       - uses: actions/setup-node@v4
         with:
           node-version: "18.x"
@@ -44,7 +39,3 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update wasm artifacts
-
-      # - run: npm publish --provenance --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
