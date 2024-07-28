@@ -35,3 +35,9 @@ Gramamrs can be used with [web-tree-sitter](https://www.npmjs.com/package/web-tr
 
 3. create PR
 4. as soon as PR merged npm package `@tsgw/something` will be published automatically
+
+## TODO
+
+- [ ] enable provenance
+- [ ] Fail script if build fails
+- [ ] Make sure to not publish without wasm file

@@ -68,6 +68,7 @@ readdirSync(base).forEach((name) => {
     `# ${gitFolderName}
 
 Source: ${config.repository}
+
 Commit sha: ${config.commit}
 `
   );
