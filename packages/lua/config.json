@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/tree-sitter-grammars/tree-sitter-lua.git",
+  "commit": "a24dab177e58c9c6832f96b9a73102a0cfbced4a",
+  "extensions": ["lua"],
+  "version": "0.0.1"
+}
