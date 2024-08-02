@@ -5,7 +5,10 @@ import Parser from "web-tree-sitter";
 import * as importMetaResolve from "import-meta-resolve";
 import { encode } from "html-entities";
 
-const code = `const x = (k) => {}`;
+// const code = readFileSync("readme.md").toString();
+// const langName = "markdown";
+
+const code = readFileSync("main.js").toString();
 const langName = "javascript";
 
 const wasmPath = importMetaResolve
@@ -140,6 +143,8 @@ const scopeToClassGithub = {
   keyword: "pl-k",
   operator: "pl-kos",
   // "number"
+  comment: "pl-c",
+  property: "pl-c1",
 };
 
 query.matches(tree.rootNode).forEach((match) => {
@@ -155,6 +160,7 @@ query.matches(tree.rootNode).forEach((match) => {
     adjusted += code.substring(lastEnd, start);
   }
   const cssClass = scopeToClassGithub[name];
+  !scopeToClassGithub[name] && console.log(name);
   adjusted += cssClass
     ? `<span class="${cssClass}">${encode(text)}</span>`
     : encode(text);
@@ -170,34 +176,7 @@ const html = `<!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./both.css" />
-    <style>
-    pre {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
-      font-size: 12px;
-    }
-    .highlight pre {
-      padding: 16px;
-      overflow: auto;
-      font-size: 85%;
-      line-height: 1.45;
-      color: var(--fgColor-default);
-      background-color: var(--bgColor-muted);
-      border-radius: 6px;
-      word-break: normal;
-      word-wrap: normal;
-    }
-    .overflow-auto {
-      overflow: auto !important;
-    }
-    .position-relative {
-      position: relative !important;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    </style>
+    <link rel="stylesheet" href="./base.css" />
   </head>
   <body>
     <div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto">
