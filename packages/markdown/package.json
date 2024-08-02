@@ -10,11 +10,13 @@
     "markdown"
   ],
   "files": [
-    "tree-sitter-markdown.wasm"
+    "tree-sitter-markdown.wasm",
+    "queries/*"
   ],
   "exports": {
     ".": "./tree-sitter-markdown.wasm",
-    "./tree-sitter-markdown.wasm": "./tree-sitter-markdown.wasm"
+    "./tree-sitter-markdown.wasm": "./tree-sitter-markdown.wasm",
+    "./queries/*": "./queries/*"
   },
   "repository": {
     "type": "git",

@@ -10,11 +10,13 @@
     "typescript"
   ],
   "files": [
-    "tree-sitter-typescript.wasm"
+    "tree-sitter-typescript.wasm",
+    "queries/*"
   ],
   "exports": {
     ".": "./tree-sitter-typescript.wasm",
-    "./tree-sitter-typescript.wasm": "./tree-sitter-typescript.wasm"
+    "./tree-sitter-typescript.wasm": "./tree-sitter-typescript.wasm",
+    "./queries/*": "./queries/*"
   },
   "repository": {
     "type": "git",

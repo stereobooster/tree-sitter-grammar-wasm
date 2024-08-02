@@ -4,6 +4,7 @@ import {
   rmSync,
   readFileSync,
   writeFileSync,
+  cpSync,
 } from "node:fs";
 import { spawnSync } from "node:child_process";
 
@@ -20,10 +21,11 @@ function packageJson({ name, version, author, license, wasmFile }) {
     author,
     license,
     keywords: ["grammar", "tree-sitter", name],
-    files: [wasmFile],
+    files: [wasmFile, "queries/*"],
     exports: {
       ".": `./${wasmFile}`,
       [`./${wasmFile}`]: `./${wasmFile}`,
+      "./queries/*": "./queries/*",
     },
     repository: {
       type: "git",
@@ -73,6 +75,11 @@ Commit sha: ${config.commit}
 `
   );
 
+  rmSync(tmpPath, {
+    force: true,
+    recursive: true,
+  });
+
   const git = `cd ${packagePath}
 mkdir tmp
 cd tmp
@@ -109,6 +116,17 @@ git checkout ${config.commit}`;
   });
 
   copyFileSync(`${tmpPath}${subPath}${wasmFile}`, `${packagePath}/${wasmFile}`);
+
+  try {
+    cpSync(`${tmpPath}${subPath}queries`, `${packagePath}/queries`, {
+      recursive: true,
+    });
+  } catch (_) {}
+  try {
+    cpSync(`${tmpPath}queries`, `${packagePath}/queries`, {
+      recursive: true,
+    });
+  } catch (_) {}
 
   rmSync(tmpPath, { recursive: true });
 });

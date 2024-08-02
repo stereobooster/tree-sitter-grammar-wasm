@@ -10,12 +10,15 @@ importers:
 
   packages/experiment:
     dependencies:
-      '@tsg-wasm/markdown':
+      '@tsgw/javascript':
+        specifier: workspace:*
+        version: link:../javascript
+      '@tsgw/markdown':
         specifier: workspace:*
         version: link:../markdown
-      '@webfill/import-meta-resolve':
-        specifier: ^1.0.0
-        version: 1.0.0
+      html-entities:
+        specifier: ^2.5.2
+        version: 2.5.2
       import-meta-resolve:
         specifier: ^4.1.0
         version: 4.1.0
@@ -23,12 +26,20 @@ importers:
         specifier: ^0.22.6
         version: 0.22.6
 
+  packages/javascript: {}
+
+  packages/lua: {}
+
   packages/markdown: {}
+
+  packages/ruby: {}
+
+  packages/typescript: {}
 
 packages:
 
-  '@webfill/import-meta-resolve@1.0.0':
-    resolution: {integrity: sha512-Y68hshnzireAt7u3bkF5BkIRM3gzHYhfRWrQk0qd694cL4ih4kvyrtCUraygVqIlpVrkTK6G3cpSYBs7ou0DkA==}
+  html-entities@2.5.2:
+    resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
@@ -38,7 +49,7 @@ packages:
 
 snapshots:
 
-  '@webfill/import-meta-resolve@1.0.0': {}
+  html-entities@2.5.2: {}
 
   import-meta-resolve@4.1.0: {}
 

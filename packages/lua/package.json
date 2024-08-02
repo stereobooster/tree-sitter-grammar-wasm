@@ -10,11 +10,13 @@
     "lua"
   ],
   "files": [
-    "tree-sitter-lua.wasm"
+    "tree-sitter-lua.wasm",
+    "queries/*"
   ],
   "exports": {
     ".": "./tree-sitter-lua.wasm",
-    "./tree-sitter-lua.wasm": "./tree-sitter-lua.wasm"
+    "./tree-sitter-lua.wasm": "./tree-sitter-lua.wasm",
+    "./queries/*": "./queries/*"
   },
   "repository": {
     "type": "git",

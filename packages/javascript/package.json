@@ -10,11 +10,13 @@
     "javascript"
   ],
   "files": [
-    "tree-sitter-javascript.wasm"
+    "tree-sitter-javascript.wasm",
+    "queries/*"
   ],
   "exports": {
     ".": "./tree-sitter-javascript.wasm",
-    "./tree-sitter-javascript.wasm": "./tree-sitter-javascript.wasm"
+    "./tree-sitter-javascript.wasm": "./tree-sitter-javascript.wasm",
+    "./queries/*": "./queries/*"
   },
   "repository": {
     "type": "git",

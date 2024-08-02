@@ -10,11 +10,13 @@
     "ruby"
   ],
   "files": [
-    "tree-sitter-ruby.wasm"
+    "tree-sitter-ruby.wasm",
+    "queries/*"
   ],
   "exports": {
     ".": "./tree-sitter-ruby.wasm",
-    "./tree-sitter-ruby.wasm": "./tree-sitter-ruby.wasm"
+    "./tree-sitter-ruby.wasm": "./tree-sitter-ruby.wasm",
+    "./queries/*": "./queries/*"
   },
   "repository": {
     "type": "git",

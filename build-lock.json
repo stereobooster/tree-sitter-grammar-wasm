@@ -1,22 +1,22 @@
 {
   "lua": {
-    "commit": "a24dab177e58c9c6832f96b9a73102a0cfbced4a",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "commit": "a24dab177e58c9c6832f96b9a73102a0cfbced4a"
   },
   "markdown": {
-    "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b",
-    "version": "0.2.3"
+    "version": "0.2.3",
+    "commit": "7fe453beacecf02c86f7736439f238f5bb8b5c9b"
   },
   "ruby": {
-    "commit": "0ffe457fb6aabf064f173fd30ea356845cef2513",
-    "version": "0.21.0"
+    "version": "0.21.0",
+    "commit": "0ffe457fb6aabf064f173fd30ea356845cef2513"
   },
   "javascript": {
-    "commit": "a92640f158c208ca3be28b560b838b2bd60e8eac",
-    "version": "0.21.4"
+    "version": "0.21.4",
+    "commit": "a92640f158c208ca3be28b560b838b2bd60e8eac"
   },
   "typescript": {
-    "commit": "198d03553f43a45b92ac5d0ee167db3fec6a6fd6",
-    "version": "0.21.2"
+    "version": "0.21.2",
+    "commit": "198d03553f43a45b92ac5d0ee167db3fec6a6fd6"
   }
 }
